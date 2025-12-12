@@ -26,7 +26,7 @@ ILTISS está pensado para **Arch Linux**.
 
 ```bash
 sudo pacman -S --needed git base-devel
-sudo pacman -S waybar rofi zsh fastfetch git \
+sudo pacman -S waybar rofi git \
   libappindicator-gtk3 libdbusmenu-gtk3 \
   swww imagemagick swaync pavucontrol hyprlock
 ```
@@ -34,18 +34,9 @@ sudo pacman -S waybar rofi zsh fastfetch git \
 ### Fuentes
 
 ```bash
+sudo pacman -S noto-fonts-emoji
 sudo pacman -S ttf-nerd-fonts-symbols-mono
 sudo pacman -S ttf-jetbrains-mono-nerd
-```
-
-### Powerlevel10k (AUR)
-
-```bash
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
-yay -S zsh-theme-powerlevel10k-git
 ```
 
 También es necesario tener instalado:
