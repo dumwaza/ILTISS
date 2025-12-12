@@ -1,0 +1,81 @@
+configuration {
+	modi:				"drun";
+	font:				"Product Sans 10";
+	show-icons:                     true;
+	icon-theme: 			"Reversal-dark";
+	display-drun: 			"  ";
+	drun-display-format:            "{name}";
+	sidebar-mode: 			false;
+}
+
+@theme "/dev/null"
+
+* {
+    bg: rgba(0, 0, 0, 0.3);
+    fg: #e0e0e0;
+    accent: #ffffff;
+    selected: rgba(0, 0, 0, 0.3);
+    border-color-light: #fff;
+    
+    background-color: transparent;
+    text-color: @fg;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+window {
+    background-color: @bg;
+    border: 0px;
+    border-radius: 12px;
+    width: 400px;
+    padding: 20px;
+}
+prompt {
+	background-color:		transparent;
+	enabled:			true;
+	padding:			0.3% 0.5px 0% 0.5%;
+	font:				"Product Sans 10";
+}
+entry {
+	background-color:               transparent;
+    	placeholder-color:              rgba(224, 224, 224, 0.5);
+    	expand:                         true;
+    	padding:                        0.5% 0.5px 0% 0.5%;
+}
+inputbar {
+    	children:			[ prompt, entry ];
+    	background-color:               @bg;
+    	expand:                         false;
+        border: 1px;
+        border-color: @border-color-light;
+    	border-radius:                  8px;
+    	margin:                         0%;
+    	padding:                        10px;
+}
+listview {
+    lines: 5;
+    spacing: 10px;
+    scrollbar: false;
+}
+mainbox {
+    	children:                       [ inputbar, listview ];
+    	spacing:                       	20px;
+}
+element {
+    padding: 15px;
+    border-radius: 8px;
+    text-color: @fg;
+}
+element selected {
+    background-color: @selected;
+    text-color: @accent;
+    border: 1px;
+    border-color: @border-color-light;
+}
+element-text {
+    vertical-align: 0.5;
+}
+element-icon {
+    size: 40px;
+    padding: 0 10px 0 0;
+}

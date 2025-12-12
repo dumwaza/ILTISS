@@ -1,0 +1,91 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 38,
+  "margin-top": 8,
+  "margin-left": 25,
+  "margin-right": 25,
+
+  "modules-left": ["custom/arch", "clock", "custom/iltiss", "hyprland/workspaces"],
+  "modules-right": ["tray", "custom/notification", "network", "pulseaudio", "battery", "custom/power"],
+
+  "custom/arch": {
+    "format": "",
+    "tooltip": false
+  },
+
+  "clock": {
+    "format": "󰥔 {:%H:%M}"
+  },
+
+  "custom/iltiss": {
+    "format": "ILTISS | I like that it's so simple",
+    "tooltip": false
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "active": ""
+    },
+    "on-click": "activate",
+    "all-outputs": true,
+    "persistent-workspaces": {
+      "1": [],
+      "2": []
+    }
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+  },
+
+"custom/notification": {
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󰵙",        // Hay notificaciones
+      "none": "󰂚",                // No hay notificaciones
+      "dnd-notification": "󰂛 󰵙 ",  // DND activado y hay notificaciones
+      "dnd-none": "󰂛"              // DND activado y no hay notificaciones
+    },
+    "return-type": "json",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+},
+
+"network": {
+  "interval": 3,
+  "format-wifi": " {signalStrength}%",
+  "format-ethernet": "󰛳",
+  "format-disconnected": "󰖪",
+  "tooltip-format": "{ifname}",
+  "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+  "on-click": "nm-connection-editor"
+},
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 mute",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click": "pavucontrol",
+    "tooltip-format": "{desc}"
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-icons": ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"]
+  },
+
+  "custom/power": {
+    "format": "",
+    "on-click": "~/.config/rofi/scripts/powermenu.sh",
+    "tooltip": false
+  }
+}

@@ -1,0 +1,151 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", monospace; 
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #ffffff;
+}
+
+/* Logo de Arch a la izquierda */
+#custom-arch {
+    padding: 0 12px;
+    color: #ffffff;
+    font-size: 16px;
+    margin-right: 10px;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 5px;
+}
+
+/* Workspaces */
+#workspaces {
+    margin: 0 5px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff;
+}
+
+#workspaces button:hover {
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Window title */
+#window {
+    margin: 0 10px;
+    color: #ffffff;
+    font-weight: normal;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 2px;
+    border-radius: 3px;
+}
+
+/* Clock con fondo blanco redondeado */
+#clock {
+    padding: 4px 14px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 20px;
+    margin: 0 10px;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Todos los demás módulos sin fondo pero con línea inferior */
+#custom-notification,
+#custom-power,
+#custom-iltiss,
+#pulseaudio,
+#network,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#bluetooth {
+    padding: 0 8px 2px 8px;
+    background: transparent;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 5px;
+    margin-left: 2px;
+}
+
+#tray > .passive {
+    color: #ffffff;
+}
+
+#tray > .active {
+    color: #ffffff;
+}
+
+#pulseaudio.muted {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#network.disconnected {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#battery.charging {
+    color: #ffffff;
+}
+
+#battery.warning:not(.charging) {
+    color: #ffaa00;
+}
+
+#battery.critical:not(.charging) {
+    color: #ff4444;
+}
+
+#temperature.critical {
+    color: #ff4444;
+}
+
+#bluetooth.disabled {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Tooltips */
+tooltip {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+tooltip label {
+    color: #ffffff;
+}
+
+/* Centrado horizontal perfecto */
+#custom-notification,
+#custom-power,
+#custom-iltiss,
+#tray,
+#pulseaudio,
+#network,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#bluetooth,
+#custom-arch,
+#workspaces button,
+#clock {
+    padding-left: 8px;
+    padding-right: 10px;
+}
