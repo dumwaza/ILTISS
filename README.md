@@ -1,0 +1,2 @@
+# ILTISS
+minimal Hyprland configuration
