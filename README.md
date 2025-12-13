@@ -83,6 +83,7 @@ Antes de sobrescribir cualquier archivo, ILTISS crea un respaldo en:
 ## Notas
 
 - Se recomienda cerrar sesión o reiniciar Hyprland después de la instalación
+- Para que el Wallpaper-Picker funcione correctamente es necesario guardar los wallpaper deseados dentro de ~/.config/wallpapers (tambien es posible modificar la ruta dentro de su respectiva config)
 - ILTISS está pensado para usarse tal como viene, pero es totalmente modificable
 
 ---
