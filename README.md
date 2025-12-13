@@ -77,6 +77,8 @@ Antes de sobrescribir cualquier archivo, ILTISS crea un respaldo en:
 - SUPER + L Power-Menu
 - SUPER + T Terminal
 - SUPER + Q Cerrar ventana
+  
+---
 
 ## Notas
 
