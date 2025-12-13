@@ -36,7 +36,9 @@ sudo pacman -S waybar rofi git \
 
 ```bash
 sudo pacman -S noto-fonts-emoji
+
 sudo pacman -S ttf-nerd-fonts-symbols-mono
+
 sudo pacman -S ttf-jetbrains-mono-nerd
 ```
 
@@ -72,11 +74,11 @@ Antes de sobrescribir cualquier archivo, ILTISS crea un respaldo en:
 ---
 
 ## Atajos de teclado
-- SUPER + R Rofi
-- SUPER + W Wallpaper-Picker
-- SUPER + L Power-Menu
-- SUPER + T Terminal
-- SUPER + Q Cerrar ventana
+- SUPER  +  R  Rofi
+- SUPER  +  W  Wallpaper-Picker
+- SUPER  +  L  Power-Menu
+- SUPER  +  T  Terminal
+- SUPER  +  Q  Cerrar ventana
   
 ---
 
