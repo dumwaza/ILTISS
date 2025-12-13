@@ -4,7 +4,7 @@
 
 ILTISS es una configuración para **Hyprland** enfocada totalmente en la simplicidad, la comodidad y la eficiencia.
 
-No busca ser un rice lleno de efectos ni animaciones innecesarias, sino un entorno limpio, funcional y fácil de usar, alineado con la filosofía **KISS** y el espíritu de Arch Linux.
+No busca ser un rice lleno de efectos ni animaciones innecesarias, sino un entorno limpio, funcional y fácil de usar, alineado con la filosofía **KISS** y Arch Linux.
 
 ---
 
@@ -26,6 +26,7 @@ ILTISS está pensado para **Arch Linux**.
 
 ```bash
 sudo pacman -S --needed git base-devel
+
 sudo pacman -S waybar rofi git \
   libappindicator-gtk3 libdbusmenu-gtk3 \
   swww imagemagick swaync pavucontrol hyprlock
@@ -55,9 +56,8 @@ chmod +x install.sh
 
 El script:
 - Copia los archivos de `.config` a `~/.config`
-- Coloca `.zshrc` y `.p10k.zsh` en `$HOME`
 - Da permisos de ejecución a los scripts necesarios
-- Crea un respaldo automático de archivos existentes
+- Crea un respaldo de archivos existentes
 
 ---
 
@@ -70,6 +70,13 @@ Antes de sobrescribir cualquier archivo, ILTISS crea un respaldo en:
 ```
 
 ---
+
+## Atajos de teclado
+- SUPER + R Rofi
+- SUPER + W Wallpaper-Picker
+- SUPER + L Power-Menu
+- SUPER + T Terminal
+- SUPER + Q Cerrar ventana
 
 ## Notas
 
