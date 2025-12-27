@@ -6,8 +6,7 @@
 }
 
 window#waybar {
-    background: transparent;
-    color: #ffffff;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 /* Logo de Arch a la izquierda */
@@ -16,8 +15,6 @@ window#waybar {
     color: #ffffff;
     font-size: 16px;
     margin-right: 10px;
-    border-bottom: 2px solid #ffffff;
-    border-radius: 5px;
 }
 
 /* Workspaces */
@@ -26,23 +23,10 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 0 8px;
+    color: #fff;
     background: transparent;
-    color: #ffffff;
-    border: none;
-    border-bottom: 2px solid transparent;
 }
 
-#workspaces button.active {
-    color: #ffffff;
-    font-weight: bold;
-    border-bottom: 2px solid #ffffff;
-}
-
-#workspaces button:hover {
-    color: rgba(255, 255, 255, 0.8);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-}
 
 /* Window title */
 #window {
@@ -54,33 +38,9 @@ window#waybar {
     border-radius: 3px;
 }
 
-/* Clock con fondo blanco redondeado */
 #clock {
     padding: 4px 14px;
-    background: #ffffff;
-    color: #000000;
-    border-radius: 20px;
-    margin: 0 10px;
-    border-bottom: 2px solid #ffffff;
-}
-
-/* Todos los demás módulos sin fondo pero con línea inferior */
-#custom-notification,
-#custom-power,
-#custom-iltiss,
-#pulseaudio,
-#network,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#bluetooth {
-    padding: 0 8px 2px 8px;
-    background: transparent;
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff;
-    border-radius: 5px;
-    margin-left: 2px;
+    color: #fff;
 }
 
 #tray > .passive {
@@ -146,6 +106,7 @@ tooltip label {
 #custom-arch,
 #workspaces button,
 #clock {
+    color: #fff;
     padding-left: 8px;
     padding-right: 10px;
 }
