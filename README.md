@@ -89,7 +89,3 @@ Antes de sobrescribir cualquier archivo, ILTISS crea un respaldo en:
 - ILTISS está pensado para usarse tal como viene, pero es totalmente modificable
 
 ---
-
-## Licencia
-
-Proyecto personal / uso libre
