@@ -6,11 +6,32 @@
   "margin-left": 25,
   "margin-right": 25,
 
-  "modules-left": ["custom/arch", "clock", "custom/iltiss", "hyprland/workspaces"],
-  "modules-right": ["tray", "custom/notification", "network", "pulseaudio", "battery", "custom/power"],
+  "modules-left": [
+    "custom/arch",
+   // "hyprland/window",
+    "custom/iltiss",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "tray",
+    "disk",
+    "memory",
+    "cpu",
+    "custom/notification",
+    "network",
+    "pulseaudio",
+    "battery",
+    "custom/power"
+  ],
 
   "custom/arch": {
     "format": "",
+    "on-click": "rofi -show drun",
     "tooltip": false
   },
 
@@ -37,35 +58,67 @@
     }
   },
 
-  "tray": {
-    "icon-size": 18,
-    "spacing": 10,
+  "hyprland": {
+    "format": "{}",
+    "max-length": 60,
+    "separate-outputs": true
   },
 
-"custom/notification": {
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+
+  "temperature": {
+    "interval": 2,
+    "format": " {temperatureC}°C",
+    "critical-threshold": 80,
+    "tooltip": true
+  },
+
+  "disk": {
+    "interval": 30,
+    "path": "/",
+    "format": " {percentage_used}%",
+    "tooltip": true
+  },
+
+  "memory": {
+    "interval": 2,
+    "format": " {percentage}%",
+    "tooltip": true
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format": " {usage}%",
+    "tooltip": true
+  },
+
+  "custom/notification": {
     "format": "{icon}",
     "format-icons": {
-      "notification": "󰵙",        // Hay notificaciones
-      "none": "󰂚",                // No hay notificaciones
-      "dnd-notification": "󰂛 󰵙 ",  // DND activado y hay notificaciones
-      "dnd-none": "󰂛"              // DND activado y no hay notificaciones
+      "notification": "󰵙",
+      "none": "󰂚",
+      "dnd-notification": "󰂛 󰵙",
+      "dnd-none": "󰂛"
     },
     "return-type": "json",
     "exec": "swaync-client -swb",
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-},
+  },
 
-"network": {
-  "interval": 3,
-  "format-wifi": " {signalStrength}%",
-  "format-ethernet": "󰛳",
-  "format-disconnected": "󰖪",
-  "tooltip-format": "{ifname}",
-  "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-  "on-click": "nm-connection-editor"
-},
+  "network": {
+    "interval": 3,
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": "󰛳",
+    "format-disconnected": "󰖪",
+    "tooltip-format": "{ifname}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "on-click": "nm-connection-editor"
+  },
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
