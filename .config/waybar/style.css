@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.3);
+    background: transparent;
 }
 
 /* Logo de Arch a la izquierda */
@@ -36,6 +36,11 @@ window#waybar {
     border-bottom: 2px solid #ffffff;
     padding-bottom: 2px;
     border-radius: 3px;
+}
+
+#hyprland {
+  border-bottom: none;
+  font-style: italic;
 }
 
 #clock {
@@ -101,7 +106,7 @@ tooltip label {
 #battery,
 #cpu,
 #memory,
-#temperature,
+#disk,
 #bluetooth,
 #custom-arch,
 #workspaces button,
@@ -109,4 +114,51 @@ tooltip label {
     color: #fff;
     padding-left: 8px;
     padding-right: 10px;
+    margin: 0 1px;
+}
+
+.modules-right {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    padding: 0 6px;
+    margin: 0 4px;
+}
+
+/* Los módulos dentro sin border individual */
+.modules-right > * {
+    background: transparent;
+    border: none;
+    margin: 0 4px;
+    padding: 6px 10px;
+}
+
+/* Contenedor para todos los módulos de la izquierda */
+.modules-left {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    padding: 0 6px;
+    margin: 0 4px;
+}
+
+/* Los módulos dentro sin border individual */
+.modules-left > * {
+    background: transparent;
+    border: none;
+    margin: 0 4px;
+    padding: 6px 10px;
+}
+
+/* Contenedor para módulos del centro */
+.modules-center {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    padding: 0 6px;
+    margin: 0 4px;
+}
+
+.modules-center > * {
+    background: transparent;
+    border: none;
+    margin: 0 4px;
+    padding: 6px 10px;
 }
